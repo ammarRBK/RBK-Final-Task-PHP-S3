@@ -1,3 +1,7 @@
+<!-- connot connect to database -->
+<?php 
+//include('connect-mysql-mariadb.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,20 +10,24 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+<center>
 	<h1>
 	Welcom to your Photo Cloud website
 			JOIN US AND SIGN UP 
 	</h1>
+</center>
 	<div>
 	<center>
-	 <form method="POST" action="#">
-	 	User name: <input type="txt" name="username" placeholder="enter your username">
-	 	Password: <input type="password" name="password" placeholder="enter your password">
-	 </form>
-	 <br>
-	 <input type="submit" name="submit" value="submit signup">
-	 <br><br><br>
-	 Or if you have account you can <a href="./signin.php">Sign In</a>
+        <form method="POST" action = "signup.php" >
+              Username:<input autocomlete='off' type="text" name="username">
+              Password:<input autocomlete='off' type="password" name="password">
+              <br><br>
+              <button type="submit" name="submitSignUp"
+			  
+			  value= "submitSignUp">submit/signUpa</button>
+        </form>
+	<br><br>
+ Or if you have account you can <a href="./signin.php">Sign In</a>
 	 </center>
 	</div>
 </body>

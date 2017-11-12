@@ -8,11 +8,12 @@
 <body>
 	<div>
 	<center>
+	 <h1>SIGN IN</h1>
 		<br><br><br>
-	 <form method="POST" action="#">
-	 	User name: <input type="txt" name="username" placeholder="enter your username">
-	 	Password: <input type="password" name="password" placeholder="enter your password">
-	    <input type="submit" name="submit" value="Submit">
+	 <form method="POST" action="mainPage.php">
+	 <label>User name: </label> <input id="usernameSignin" type="txt" name="username" placeholder="enter your username">
+	 	<label>Password: </label> <input id="passwordSignin" type="password" name="password" placeholder="enter your password">
+	    <input type="submit" name="submit" value="submitLogin">
 	 </form>
 	 <br>
 	 </center>
