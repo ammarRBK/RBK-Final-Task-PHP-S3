@@ -1,7 +1,4 @@
-<!-- connot connect to database -->
-<?php 
-//include('connect-mysql-mariadb.php');
-?>
+ <!-- connot connect to database -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +16,8 @@
 	<div>
 	<center>
         <form method="POST" action = "signup.php" >
-              Username:<input autocomlete='off' type="text" name="username">
-              Password:<input autocomlete='off' type="password" name="password">
+              Username:<input autocomplete='off' type="text" name="username">
+              Password:<input autocomplete='off' type="password" name="password">
               <br><br>
               <button type="submit" name="submitSignUp"
 			  
@@ -31,4 +28,4 @@
 	 </center>
 	</div>
 </body>
-</html>
+</html> 

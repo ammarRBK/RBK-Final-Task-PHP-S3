@@ -1,22 +1,18 @@
 <?php
 if(isset($_POST['submitSignUp'])){
-  include_once("connect-mysql-mariadb.php");
-  if($_POST['submitSignUp']){
+  include_once 'connect-mysql-mariadb.php';
        $user = $_POST['username'];
        $pass = $_POST['password'];
-      $sql = "INSERT into users(username,password) values('$user','$pass')";
-       $qury = mysql_query($sql);
-      if(!$qury)
+       $hashedPassword = password_hash($pass,PASSWORD_DEFAULT);
+      $sql = "INSERT INTO users(username,password) VALUES ('$user','$hashedPassword');";
+       mysqli_query($con,$sql);
+      if(!$sql)
       {
-          echo "Failed ".mysql_error();
-          echo "<br /><a href='signupform.php'>SignUp</a>";
-          echo "<br /><a href='signinform.php'>SignIn</a>";
+          echo "Failed ".mysqli_error();
       }
       else
       {
-        $succsee = "Successful";
         echo "welcom to our family";
       }
-  }
 }
 ?>
